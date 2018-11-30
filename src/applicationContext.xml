@@ -19,7 +19,12 @@
  	
  	<bean id="happyFortune"
  		class="com.atul.spring.HappyFortuneService">
- 	</bean>	
+ 	</bean>
+ 	
+ 	<bean id="cricketCoach"
+ 		class="com.atul.spring.CricketCoach">
+ 		<property name="cricketFortuneService" ref="happyFortune"></property>
+ 	</bean>
 </beans>
 
 

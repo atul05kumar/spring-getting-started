@@ -18,6 +18,11 @@ public class HelloSpringApp {
 		System.out.println(basketBallCoach.getDailyFortune());
 		System.out.println(trackCoach.getDailyFortune());
 		
+		
+		//setter injection using Spring
+		Coach cricketCoach = context.getBean("cricketCoach", Coach.class);
+		System.out.println(cricketCoach.getDailyFortune());
+		
 		//close the context
 		context.close();
 		
