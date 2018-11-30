@@ -2,6 +2,8 @@ package com.atul.spring;
 
 public interface Coach {
 	
-	public void getDailyWorkout();
+	public String getDailyWorkout();
+	
+	public String getDailyFortune();
 
 }
