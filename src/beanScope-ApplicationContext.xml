@@ -10,7 +10,8 @@
 <!-- Defining beans using XML file is a old way. Modern way is using annotations -->
     <!-- Define your beans here -->
  	<bean id="trackCoach"
- 		class="com.atul.spring.TrackCoach">
+ 		class="com.atul.spring.TrackCoach"
+ 		scope="prototype">
  		<constructor-arg ref="happyFortune"></constructor-arg>	
  	</bean>	
  	
