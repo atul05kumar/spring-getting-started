@@ -3,7 +3,32 @@ package com.atul.spring;
 public class CricketCoach implements Coach {
 
 	private FortuneService cricketFortuneService;
+	private String email;
+	private String team;
 	
+	
+	public String getEmail() {
+		return email;
+	}
+
+
+	public void setEmail(String email) {
+		System.out.println("Inside CricketCoach : Setting Email");
+		this.email = email;
+	}
+
+
+	public String getTeam() {
+		return team;
+	}
+
+
+	public void setTeam(String team) {
+		System.out.println("Inside CricketCoach : Setting Team Name");
+		this.team = team;
+	}
+
+
 	public CricketCoach() {
 		System.out.println("Inside default CricketCoach Constructor!");
 	}

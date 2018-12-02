@@ -24,6 +24,8 @@
  	<bean id="cricketCoach"
  		class="com.atul.spring.CricketCoach">
  		<property name="cricketFortuneService" ref="happyFortune"></property>
+ 		<property name="email" value="coach@cricket.com"></property>
+ 		<property name="team" value="Indian Cricket Team"></property>
  	</bean>
 </beans>
 

@@ -23,6 +23,11 @@ public class HelloSpringApp {
 		Coach cricketCoach = context.getBean("cricketCoach", Coach.class);
 		System.out.println(cricketCoach.getDailyFortune());
 		
+		
+		//reading literal values injected in bean using spring.
+		CricketCoach cricketCoachImpl = context.getBean("cricketCoach", CricketCoach.class);
+		System.out.println(cricketCoachImpl.getEmail());
+		System.out.println(cricketCoachImpl.getTeam());
 		//close the context
 		context.close();
 		
