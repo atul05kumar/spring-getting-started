@@ -2,7 +2,8 @@ package com.atul.spring;
 
 public class CricketCoach implements Coach {
 
-	private FortuneService cricketFortuneService;
+	//private FortuneService cricketFortuneService;
+	private FortuneService randomFortuneService;
 	private String email;
 	private String team;
 	private String firstName;
@@ -55,11 +56,17 @@ public class CricketCoach implements Coach {
 		System.out.println("Inside default CricketCoach Constructor!");
 	}
 	
-	
+	/*
+	//Spring calls setter method of member variable to set its value, when the object gets created.
 	public void setCricketFortuneService(FortuneService cricketFortuneService) {
 		System.out.println("Setting the dependency using Spring!");
 		this.cricketFortuneService = cricketFortuneService;
+	}*/
+	
+	public void setRandomFortuneService(FortuneService randomFortuneService) {
+		this.randomFortuneService = randomFortuneService;
 	}
+
 
 	@Override
 	public String getDailyWorkout() {
@@ -69,7 +76,7 @@ public class CricketCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		
-		return cricketFortuneService.getFortune();
+		return randomFortuneService.getFortune();
 	}
 	
 }

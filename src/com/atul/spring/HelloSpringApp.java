@@ -29,7 +29,7 @@ public class HelloSpringApp {
 		System.out.println(cricketCoachImpl.getEmail());
 		System.out.println(cricketCoachImpl.getTeam());
 		
-		//readying member variables using property file
+		//reading member variables using property file
 		System.out.println(cricketCoachImpl.getFirstName());
 		System.out.println(cricketCoachImpl.getLastName());
 		//close the context
