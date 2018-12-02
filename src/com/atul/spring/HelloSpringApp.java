@@ -28,6 +28,10 @@ public class HelloSpringApp {
 		CricketCoach cricketCoachImpl = context.getBean("cricketCoach", CricketCoach.class);
 		System.out.println(cricketCoachImpl.getEmail());
 		System.out.println(cricketCoachImpl.getTeam());
+		
+		//readying member variables using property file
+		System.out.println(cricketCoachImpl.getFirstName());
+		System.out.println(cricketCoachImpl.getLastName());
 		//close the context
 		context.close();
 		

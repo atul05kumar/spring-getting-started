@@ -8,6 +8,10 @@
     http://www.springframework.org/schema/context/spring-context.xsd">
 
 <!-- Defining beans using XML file is a old way. Modern way is using annotations -->
+
+	<!-- referencing a property file -->
+	<context:property-placeholder location="classpath:sport.properties"/>
+
     <!-- Define your beans here -->
  	<bean id="trackCoach"
  		class="com.atul.spring.TrackCoach">	 		
@@ -26,6 +30,8 @@
  		<property name="cricketFortuneService" ref="happyFortune"></property>
  		<property name="email" value="coach@cricket.com"></property>
  		<property name="team" value="Indian Cricket Team"></property>
+ 		<property name="firstName" value="${first.name}"></property>
+ 		<property name="lastName" value="${last.name}"></property>
  	</bean>
 </beans>
 
