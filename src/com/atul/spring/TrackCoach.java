@@ -1,6 +1,15 @@
 package com.atul.spring;
 
 public class TrackCoach implements Coach {
+	
+	private FortuneService fortuneService;
+	
+	public TrackCoach(FortuneService fortuneService) {
+		this.fortuneService  = fortuneService;
+	}
+
+	public TrackCoach() {
+	}
 
 	@Override
 	public String getDailyWorkout() {
@@ -11,7 +20,7 @@ public class TrackCoach implements Coach {
 	@Override
 	public String getDailyFortune() {
 		
-		return "A track runner always has good fortune.";
+		return fortuneService.getFortune();
 	}
 	
 }
