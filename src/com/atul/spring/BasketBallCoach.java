@@ -19,6 +19,17 @@ public class BasketBallCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
+	
+	
+	//init method - will be invoked on bean construction.
+	public void init() {
+		System.out.println("BasketBallCoach : Inside init method.");
+	}
+	
+	//destroy method - will be invoked on bean destruction.
+	public void cleanup() {
+		System.out.println("BasketBallCoach : Inside cleanup method.");
+	}
 
 	
 }

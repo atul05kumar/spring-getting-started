@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xmlns:context="http://www.springframework.org/schema/context"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans.xsd
+    http://www.springframework.org/schema/context
+    http://www.springframework.org/schema/context/spring-context.xsd">
+
+<!-- Defining beans using XML file is a old way. Modern way is using annotations -->
+    <!-- Define your beans here -->
+ 	<bean id="trackCoach"
+ 		class="com.atul.spring.TrackCoach"
+ 		init-method="init"
+ 		destroy-method="cleanup">
+ 		<constructor-arg ref="happyFortune"></constructor-arg>	
+ 	</bean>	
+ 	
+ 	<bean id="happyFortune"
+ 		class="com.atul.spring.HappyFortuneService">
+ 	</bean>
+ 	
+ 	<bean id="basketBallCoach"
+ 		class="com.atul.spring.BasketBallCoach"
+ 		scope="prototype"
+ 		init-method="init"
+ 		destroy-method="cleanup">
+ 		<constructor-arg ref="happyFortune"></constructor-arg>
+ 	</bean>
+ 	
+</beans>
+
+
+
+
+

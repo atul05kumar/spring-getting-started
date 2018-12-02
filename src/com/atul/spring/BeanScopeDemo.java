@@ -22,8 +22,9 @@ public class BeanScopeDemo {
 		//print the memory location of individual beans
 		System.out.println("Memory location of trackCoach bean is " + trackCoach);
 		System.out.println("Memory location of alphaCoach bean is " + alphaCoach);
+
 		
-		//above demonstrates that default bean scope is singleton and only one bean is created.
+		context.close();
 		
 
 	}
